@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #dadada;
+    display: flex;
+}
+
+.wrapper {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.img {
+    width: 22%;
+    height: 200px;
+    overflow: hidden;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.img:hover img {
+    transform: scale(1.2);
+}
+
+.gallery {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    /* Vô hiệu hóa sự kiện click vào gallery */
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.gallery-inner {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.control {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.control.prev {
+    left: 15px;
+}
+
+.control.next {
+    right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.hide {
+    display: none;
+}
